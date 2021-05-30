@@ -1,0 +1,1 @@
+# Analysis-on-Current-Flow-Style-for-Vehicle-Alternator-Fault-Prediction
