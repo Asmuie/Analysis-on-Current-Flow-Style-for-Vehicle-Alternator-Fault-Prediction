@@ -20,7 +20,7 @@ Kruskal-Wallis is used as non-parametric data validation.  In this test, the hyp
 
 In KNN the parameter to find classification is K value tested from K=1 to K=10. For holdout method, it is tested for 10 times and the average accuracy is then accumulated in Table 1.
 
-
+![knn](https://user-images.githubusercontent.com/84698964/134270087-5352271f-2d7a-4e5d-a37f-fc9577f61977.PNG)
 
 
 Figure 1 is the K value for KNN where it has been tested from K=1 to K=10 and fine the best accuracy. 
