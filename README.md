@@ -4,11 +4,46 @@
 
 **[Analysis on Current Flow Style for Vehicle Alternator Fault Prediction](https://iopscience.iop.org/article/10.1088/1757-899X/670/1/012042/meta)**
  
-  ![Flowchart](https://user-images.githubusercontent.com/84698964/120099674-5bc37980-c16f-11eb-8ee9-951028a3c975.PNG)
+1. Introduction
 
-- Analyse the output pattern from good alternator and bad alternator
-- Applied <u>*Statistical Analysis*</u> on features extracted to check for normality and data validation using <u>*Jarque-Bera test*</u> and <u>*Kruskal-Wallis test*</u>..
-- Implemented <u>*K-Nearest Neighbors*</u> for classification and <u>*Holdout Method*</u> for average accuracy.
+Vehicle alternator is only seen as fragment piece in vehicle. This project will analyse the vehicle alternator current output flow style. A study on charging rate onto battery can be made based on this analyst. From this a prediction can be made on the vehicle alternator health and may prevent it from affecting other charging system component.
+
+
+2. Methodology 
+
+Features extracted from the raw sample data are root mean square (RMS), waveform length (WL) and autoregressive (AR). These features will then go through normality test to find the sample is normally distributed or not. The normality test used in this experiment is Jarque-Bera (JB) test. After go through the normality test, it shows that need to continue with non-parametric test. Because JB test shows that p-value is less than 0.05 confidence level. 
+
+Kruskal-Wallis is used as non-parametric data validation.  In this test, the hypothesized value is the value is the median instead of the mean as in Analysis if Variance (ANOVA). The Kruskal-Wallis test evaluates for any significance difference in the population medians on a dependent variable across all levels of a factor. For classification K-Nearest Neighbour (KNN) is used to find the number of K to differentiate between classes. After that the K value is use in Holdout method for training and testing.
+
+
+3. Results and Discussions
+
+In KNN the parameter to find classification is K value tested from K=1 to K=10. For holdout method, it is tested for 10 times and the average accuracy is then accumulated in Table 1.
+
+
+
+
+Figure 1 is the K value for KNN where it has been tested from K=1 to K=10 and fine the best accuracy. 
+Later then holdout method will come around to find out the distribution accuracy. The holdout method 
+is done for 10 times then get the average accuracy.
+
+
+Final result shows that the accuracy of this machine learning tools is 94%. This number is a good percentage to be able to called as vehicle alternator fault prediction.
+
+
+4. Conclusions
+
+Based on the normality test, the findings are that the data is not normally distributed. Jarque-Bera test is the chosen normality test. Therefore, it must go to non-parametric test. There are a lot of type of parametric test but the chosen one Kruskal-Wallis for the non-parametric data validation. 
+
+For non-parametric classification, K-Nearest Neighbour is chosen among other method. This is to find the number of K so the class can be differentiating. The test is done for 10 times and the number of K is trained by using cross validation technique which is Holdout method. For Holdout method there is 3 type of Holdout setting used. Which is 60-40, 70-30 and 80-20. 
+
+
+
+
+
+
+
+
 
 
 **Keywords:** K-Nearest Neighbors / Statitical Analysis / MATLAB / Jarque-Bera Test / Kruskal-Wallis test / Fault Prediction
@@ -19,4 +54,3 @@ Ser. Mater. Sci. Eng., 2019.
 
 **Project Repository:** [Fault Prediction Analysis](https://github.com/Asmuie/Data-Science-Portfolio/tree/main/Fault%20Prediction%20Analysis)
  
- ![KNNacc2](https://user-images.githubusercontent.com/84698964/120100337-e659a800-c172-11eb-8712-8edbe7c46e7e.PNG)
