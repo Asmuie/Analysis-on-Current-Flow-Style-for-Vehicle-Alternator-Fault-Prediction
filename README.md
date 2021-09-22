@@ -27,6 +27,7 @@ Figure 1 is the K value for KNN where it has been tested from K=1 to K=10 and fi
 Later then holdout method will come around to find out the distribution accuracy. The holdout method 
 is done for 10 times then get the average accuracy.
 
+![holdout](https://user-images.githubusercontent.com/84698964/134270244-ffa5f77c-a461-4ec8-b5e4-90427c456d11.PNG)
 
 Final result shows that the accuracy of this machine learning tools is 94%. This number is a good percentage to be able to called as vehicle alternator fault prediction.
 
